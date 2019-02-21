@@ -29,9 +29,11 @@ h2 {
 
 button {
     height: 120px;
-    width: 230px;
-    margin-top: 2px;
+    width: 225px;
+    margin: 2px 2px;
     font-family: Impact;
     font-size: 40px;
     background-color: crimson;
+    color: rgb(235, 227, 227);
+    border-radius: 10px;
 }
