@@ -1,7 +1,7 @@
-
 let userScore = 0;
 let cpuScore = 0;
-let roundCount = 1;
+let roundCount = 0;
+
 
 function computerPlay(){
 let options = ['rock', 'paper', 'scissors'];
@@ -10,9 +10,6 @@ return randOpt;
 };
 
 function playRound(playerSelection, computerSelection) {
-    const computerSelection = computerPlay();
-    const playerSelection = prompt('Please type rock, paper, or scissors');
-    let result;
     switch(computerSelection){
         case 'rock':
             if(playerSelection == 'paper'){
@@ -58,8 +55,23 @@ function playRound(playerSelection, computerSelection) {
     
     }
     if (result == 'win'){
-        return 'You '
+        return 'You win!'
+    }else if(result == 'lose'){
+        return 'You lose!'
+    }else{
+        return 'It\'s a tie!'
     }
-    
 }
 
+function game(){
+    let playerSelection = prompt('Please type rock, paper, or scissors');
+    let computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+    console.log('Player Score:');
+    console.log(userScore);
+    console.log('CPU Score:');
+    console.log(cpuScore)
+    console.log('Round:');
+    console.log(roundCount);
+
+}

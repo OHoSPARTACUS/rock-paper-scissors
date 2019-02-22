@@ -4,36 +4,8 @@
     font-family: Arial;
 }
 
-.scoreboard {
-    height: 500px;
-    width: 700px;
-    border: black 1px solid;
-    margin: 0 auto;
-    margin-top: 10px;  
-}
-
-h1 {
-    margin: 25px 150px;
-}
-
-h2 {
-    margin-left: 220px;
-}
-.gameinput {
-    height: 125px;
-    width: 700px;
-    border: black 1px solid;
-    margin: 0 auto;
-    box-shadow: 0 5px 7px 0;
-}
-
-button {
-    height: 120px;
-    width: 225px;
-    margin: 2px 2px;
-    font-family: Impact;
-    font-size: 40px;
-    background-color: crimson;
-    color: rgb(235, 227, 227);
-    border-radius: 10px;
+.gameboard{
+    margin:20px auto;
+    width: 50%;
+    text-align: center;
 }
