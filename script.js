@@ -2,13 +2,14 @@ let userScore = 0;
 let cpuScore = 0;
 let roundCount = 0;
 
-
+//CPU Choice Selection
 function computerPlay(){
 let options = ['rock', 'paper', 'scissors'];
 let randOpt = options[Math.floor(Math.random()*options.length)];
 return randOpt;
 };
 
+//Round of game, compares player choice with CPU choice
 function playRound(playerSelection, computerSelection) {
     switch(computerSelection){
         case 'rock':
@@ -62,7 +63,7 @@ function playRound(playerSelection, computerSelection) {
         return 'It\'s a tie!'
     }
 }
-
+//Game function, returns score, round, and winner of each round. winner declared
 function game(){
     let playerSelection = prompt('Please type rock, paper, or scissors');
     let computerSelection = computerPlay();
