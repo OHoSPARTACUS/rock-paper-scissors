@@ -73,5 +73,18 @@ function game(){
     console.log(cpuScore)
     console.log('Round:');
     console.log(roundCount);
-
+    
+    if(roundCount >= 5){
+        if(userScore > cpuScore){
+            console.log('Game over! You\'re a winner!');
+        }else if(userScore < cpuScore){
+            console.log('Game over! You\'re a loser!');
+        }else{
+            console.log('Game over! It\'s a draw!');
+        }
+        cpuScore = 0;
+        userScore = 0;
+        roundCount = 0;
+    }
+    return playerSelection;
 }
