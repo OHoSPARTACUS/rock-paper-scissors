@@ -75,7 +75,6 @@ function game(){
     console.log('Round:');
     console.log(roundCount);
     console.log('CPU Choice:')
-    return computerSelection;
     
     if(roundCount >= 5){
         if(userScore > cpuScore){
@@ -89,5 +88,6 @@ function game(){
         userScore = 0;
         roundCount = 0;
     }
+    return computerSelection;
     
 }
