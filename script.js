@@ -22,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
                 ++cpuScore;
                 ++roundCount;
             }else{
-                result = 'tied'
+                result = 'tied';
                 ++roundCount;
             }
             break;
@@ -56,11 +56,11 @@ function playRound(playerSelection, computerSelection) {
     
     }
     if (result == 'win'){
-        return 'You win!'
+        return 'You win!';
     }else if(result == 'lose'){
         return 'You lose!'
     }else{
-        return 'It\'s a tie!'
+        return 'It\'s a tie!';
     }
 }
 //Game function, returns score, round, and winner of each round. winner declared
@@ -74,6 +74,8 @@ function game(){
     console.log(cpuScore)
     console.log('Round:');
     console.log(roundCount);
+    console.log('CPU Choice:')
+    return computerSelection;
     
     if(roundCount >= 5){
         if(userScore > cpuScore){
@@ -87,5 +89,5 @@ function game(){
         userScore = 0;
         roundCount = 0;
     }
-    return playerSelection;
+    
 }
