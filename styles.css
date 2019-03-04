@@ -4,8 +4,86 @@
     font-family: Arial;
 }
 
+body{
+    background-color: rgb(192, 187, 187);
+}
+
+.banner{
+    text-align: center;
+    margin: 20px 0;
+}
+
 .gameboard{
-    margin:20px auto;
-    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 600px;
+    height: 305px;
+    text-align: center;
+    background-color: white;
+}
+
+#game-msg{
+    margin: 0 auto;
+    height: 75px;
+    width: 600px;
+    background-color: white;
+    text-align: center;
+    
+}
+
+#user-score{
+    float: left;
+    margin: 0px 90px;
+    height: 160px;
+    width: 120px;
+    color: white;
+    background-color: crimson;
+    border-radius: 10px;
+}
+
+#cpu-score{
+    float: right;
+    margin: 0px 90px;
+    height: 160px;
+    width: 120px;
+    color: white;
+    background-color: crimson;
+    border-radius: 10px;
+}
+
+#user-result{
+    font-family: Arial;
+    font-size: 20px;
     text-align: center;
 }
+
+#cpu-result{
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+}
+
+p{
+    font-size: 80px;
+    font-family: Impact;
+}
+
+.input{
+    margin: 0px auto; 
+    width: 600px;
+    height: 100px;
+    background-color: white;
+}
+
+.button{
+    height: 98px;
+    width: 195px;
+    font-size: 40px;
+    font-family: Impact;
+    margin: 0px 1px;
+    color: white;
+    background-color: crimson;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+

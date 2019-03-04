@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Rock Paper Scissors</title>
 <link href="styles.css" rel="stylesheet">
-
 </head>
+
 <body>
+<br><h1 class="banner"> Rock | Paper | Scissors</h1>
+
 <div class="gameboard">
-<h1>Rock | Paper | Scissors</h1><br>
-<h2>Open dev tools to play!</h2><br>
-<h3>Type "Game()" into console to begin.</h3><br>
-<h3>5 rounds. Have more points than the CPU to win!</h3>
+    <br><h2>5 rounds. Have more points than the CPU to win!</h2><br>
+    <h3>Round:</h3>
+    <h2 id="round">1</h2>
+    <div id="user-score">
+        <h3>Player:</h3>
+        <br>
+        <p id= pScore>0</p>
+        <p id="user-result"></p>
+    </div>
+    <div id="cpu-score">
+        <h3>CPU:</h3>
+        <br>
+        <p id="cScore">0</p>
+        <p id="cpu-result"></p>
+    </div>
 </div>
+
+<div>
+<h4 id="game-msg"></h4>
+<h4 id="game-result"></h4>
+</div>
+
+<div class="input">
+    <button class="button" name="rock" onclick="startGame(this.name)">ROCK</button>
+    <button class="button" name="paper" onclick="startGame(this.name)">PAPER</button>
+    <button class="button" name="scissors" onclick="startGame(this.name)">SCISSORS</button>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 
 </html>
