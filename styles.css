@@ -87,6 +87,19 @@ p{
     border-radius: 10px;
 }
 
+.button:hover{
+    background-color: red;
+}
+
+.button:active{
+    background-color: orangered;
+    border-color: white;
+}
+
+button:focus{
+    outline: 0;
+}
+
 
 
 
