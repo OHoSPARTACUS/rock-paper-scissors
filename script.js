@@ -12,7 +12,7 @@ function startGame(playerSelection){
     document.getElementById("game-result").innerHTML = "";
     
     setPoints(roundWinner);
-    EndGame();   
+    endGame();   
 }
 
 //CPU Choice Selection.
@@ -67,8 +67,8 @@ function setPoints(roundWinner){
         document.getElementById("game-msg").innerHTML = "Round Tied!"
     }   
 }
-function EndGame(){
-    if(round > 4){
+function endGame(){
+    if(round > 5){
         gameResult();
         newGame();    
     }
