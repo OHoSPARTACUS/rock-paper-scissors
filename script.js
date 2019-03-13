@@ -5,13 +5,14 @@ let round = 1;
 function startGame(playerSelection){
     computerSelection = cpuSelection();
     let roundWinner = playRound(playerSelection, computerSelection);
-     ++round;
+     round++;
     document.getElementById("round").innerHTML = round;
     document.getElementById("user-result").innerHTML = playerSelection;
     document.getElementById("cpu-result").innerHTML = computerSelection;
+    document.getElementById("game-result").innerHTML = "";
     
     setPoints(roundWinner);
-    checkEndGame();   
+    EndGame();   
 }
 
 //CPU Choice Selection.
@@ -66,22 +67,55 @@ function setPoints(roundWinner){
         document.getElementById("game-msg").innerHTML = "Round Tied!"
     }   
 }
-function checkEndGame(userScore, cpuScore){
-   if (round == 5){
-       if(userScore > cpuScore){
-           document.getElementById("game-result").innerHTML = "Game over! You're a Winner!";
-           disableButtons();
-       }else if(userScore < cpuScore){
-        document.getElementById("game-result").innerHTML = "Game over! You're a Loser!";
-        disableButtons();
-       }
-   }
+function EndGame(){
+    if(round > 4){
+        gameResult();
+        newGame();    
+    }
 }
 
 function disableButtons() {
-	var elems = document.getElementsByClassName("buttons");
+	var elems = document.getElementsByClassName("button");
 	for(var i = 0; i < elems.length; i++) {
 	    elems[i].disabled = true;
 	}
 }
+
+function gameResult(){
+    if(userScore > cpuScore){
+        document.getElementById("game-result").innerHTML = "Game over! You're a winner!";   
+        disableButtons();
+    }else if(userScore < cpuScore){
+        document.getElementById("game-result").innerHTML = "Game over! You're a loser!";
+        disableButtons();    
+    }else{
+        document.getElementById("game-result").innerHTML = "Game over! It's a draw!";
+        disableButtons();    
+    }
+}
+
+function enableButtons() {
+    var elems = document.getElementsByClassName("button");
+	for(var i = 0; i < elems.length; i++) {
+	    elems[i].disabled = false;
+	}
+}
+
+function newGame() {
+    if(confirm('Play Again?')){
+        userScore = 0;
+        cpuScore = 0;
+        round = 1;
+        document.getElementById("pScore").innerHTML = userScore;
+        document.getElementById("cScore").innerHTML = userScore;
+        document.getElementById("round").innerHTML = userScore;
+        document.getElementById("game-msg").innerHTML = "";
+        enableButtons();
+    }else{
+        console.log('Why did you do that?');
+    }
+    
+}
+
+
 

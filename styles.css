@@ -22,9 +22,9 @@ body{
     background-color: white;
 }
 
-#game-msg{
+#game-msg, #game-result{
     margin: 0 auto;
-    height: 75px;
+    height: 50px;
     width: 600px;
     background-color: white;
     text-align: center;
@@ -86,4 +86,7 @@ p{
     border: 1px solid transparent;
     border-radius: 10px;
 }
+
+
+
 
